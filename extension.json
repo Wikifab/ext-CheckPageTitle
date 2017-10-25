@@ -1,0 +1,36 @@
+{
+	"name": "Check Page Title",
+	"author": "Solene",
+	"version": "1.0.0",
+	"url": "https://www.mediawiki.org/wiki/Extension:CheckPageTitle",
+	"descriptionmsg": "Check Page Title",
+	"license-name": "GPL-2.0+",
+	"type": "parserhook",
+	"ResourceModules": {
+		"ext.checkpagetitle.js": {
+			"scripts": [
+				"resources/wikifab-style-checkpagetitle.js"			]
+		},
+		"ext.checkpagetitle.css": {
+			"styles": [
+				"resources/wikifab-style-checkpagetitle.css"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "CheckPageTitle"
+	},
+	"AutoloadClasses": {
+		"CheckPageTitle": "includes/CheckPageTitle.class.php"
+	},
+	"ExtensionMessagesFiles": {
+		"CheckPageTitle": "CheckPageTitle.i18n.php"
+	},
+	"Hooks": {
+		"BeforePageDisplay": [
+			"CheckPageTitle::onBeforePageDisplay"
+		]
+	},
+	"manifest_version": 1
+}
