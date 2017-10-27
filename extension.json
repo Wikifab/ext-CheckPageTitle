@@ -30,6 +30,9 @@
 	"Hooks": {
 		"BeforePageDisplay": [
 			"CheckPageTitle::onBeforePageDisplay"
+		],
+		"ResourceLoaderGetConfigVars": [
+			"CheckPageTitle::onResourceLoaderGetConfigVars"
 		]
 	},
 	"manifest_version": 1
