@@ -5,7 +5,7 @@ This MediaWiki extension add to the title input field a control about what users
 	Clone CheckTitlePage into the 'extensions' directory of your mediawiki installation
 	Add the folling Line to your LocalSettings.php file :
 
-    require_once("$IP/extensions/UsersPagesLinks/UsersPagesLinks.php");
+    wfLoadExtension('CheckPageTitle');
 
 	Add this line too to your LocalSettings.php file : 
     $wgLegalTitleChars = " %!\"$&'*()\\-\\/0-9A-Z_.`a-z\\x80-\\xFF";
