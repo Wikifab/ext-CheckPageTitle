@@ -1,0 +1,7 @@
+{
+    "name": "wikifab/check-page-title",
+    "description": "Check if the title's page get an unsual chars and alert users",
+    "type": "mediawiki-extension",
+    "require": {
+    }
+}
