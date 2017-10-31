@@ -1,8 +1,19 @@
-#Description
+# Description
 
-This MediaWiki extension add to the title input field a control about what users put in it. So if it's a wrong chars, a modal box appears and block the next page. Also if there is a space at the end of the string, this one is removed.   
+This MediaWiki extension controls that the name entered into the Page Form's input title field doesn't contains some specific caracters. If the extension detects a wrong characters, a modal box appears and doesn't allow the user to create the page with this name.
+
+Also if there is a blank space at the end of the entered string, the blank space is removed automactically.
+
+We have create this extension to avoid people to create pages with weird characters.
+
+# How it works?
+
+The extensions checks the "formInput" class.
+
+# Installation
 
 1. Clone CheckTitlePage into the 'extensions' directory of your mediawiki installation
+
 2. Add the folling Line to your LocalSettings.php file :
 
     wfLoadExtension('CheckPageTitle');
@@ -11,7 +22,10 @@ This MediaWiki extension add to the title input field a control about what users
 
     $wgLegalTitleChars = " %!\"$&'*()\\-\\/0-9A-Z_.`a-z\\x80-\\xFF";
 	
+# Dependencies	
 
-#MediaWiki Versions
+This extension works with the Extension:PageForms.
+
+# MediaWiki Versions
 
 This extension has been tested on MediaWiki version 1.27.1
