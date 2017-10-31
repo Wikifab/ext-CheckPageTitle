@@ -24,8 +24,7 @@
 			else {
 				var newValueInput = inputValue.trim();
 				$('.formInput').val(newValueInput);		
-				event.preventDefault();				
-				return false;
+				return true;
 			}
 
 		});
