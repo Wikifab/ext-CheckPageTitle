@@ -3,29 +3,29 @@
 	$(document).ready(function() {
 
 
-		$('.forminput_button').click(function(evt){
+		$('.forminput_button').click(function(event){
 			var regex;
+			var regexDefaultCompare;
+			var regexAdd;
 			var inputValue = $('.formInput').val();
 			var conf = mw.config.get( 'wgCheckPageTitle' );
+			
 			var secondRegex = new RegExp("[\/.]","g");
-			// TO DO : Manque la valeur de conf qui n'est pas récupérée correctement 
-			if (conf == null){
-				regex = new RegExp("[^ %!\"$&'*()\-\/0-9A-Z_.`a-z\x80-\xFF]","g");
-					
-			}
-			else {
-				var regex = new RegExp("[^"+conf.legalTitleChars+ "]","g");
-			}
+			
+			regex = new RegExp("[^"+conf.legalTitleChars+ "]","g");
+			regexDefaultCompare = regex.exec(inputValue);
+			regexAdd = secondRegex.exec(inputValue);
 
-			if ((monTableau = regex.exec(inputValue)) !== null || (monTableau = secondRegex.exec(inputValue)) !== null) {
-				$('#ModalError').modal('show');
-				 evt.preventDefault();				
-				 return false;
+			if (regexDefaultCompare !== null || (regexAdd !== null)) {
+				$('#ModalError').modal('show'); 	
+				event.preventDefault();
+				return false;
 			}
 			else {
 				var newValueInput = inputValue.trim();
 				$('.formInput').val(newValueInput);		
-				return true;
+				event.preventDefault();				
+				return false;
 			}
 
 		});

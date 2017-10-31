@@ -9,7 +9,7 @@ This MediaWiki extension add to the title input field a control about what users
 
 3. Add this line too to your LocalSettings.php file : 
 
-    $wgLegalTitleChars = " %!\"$&'*()\\-\\/0-9A-Z_.`a-z\\x80-\\xFF";
+	$wgLegalTitleChars = " %!\"$'()*,\\-.\\/0-9@A-Z\^_`a-z~\\x80-\\xFF+";
 	
 
 #MediaWiki Versions
