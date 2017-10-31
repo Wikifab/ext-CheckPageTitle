@@ -1,6 +1,6 @@
 # Description
 
-This MediaWiki extension controls that the name entered into the Page Form's input title field doesn't contains some specific caracters. If the extension detects a wrong characters, a modal box appears and doesn't allow the user to create the page with this name.
+This MediaWiki extension controls that the name entered into the Page Form's input title field doesn't contains some specific caracters. If the extension detects a wrong characters, a modal box appears and prevent the user to create the page with the entered title.
 
 Also if there is a blank space at the end of the entered string, the blank space is removed automactically.
 
