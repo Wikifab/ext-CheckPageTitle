@@ -32,10 +32,10 @@ class CheckPageTitle {
 
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
 		global $wgLegalTitleChars;
-
 		$vars['wgCheckPageTitle'] = [
-				'legalTitleChars' => $wgLegalTitleChars,
+		    'legalTitleChars' => $wgLegalTitleChars,
 		];
+		return true;
 	}
 }
 ?>
