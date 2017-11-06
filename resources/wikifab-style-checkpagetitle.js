@@ -1,25 +1,30 @@
 (function() {
 	
 	$(document).ready(function() {
-		conf = mw.config.get( 'wgCheckPageTitle' );
-		
-	
-		$('.forminput_button').click(function(){
+
+
+		$('.forminput_button').click(function(event){
+			var regex;
+			var regexDefaultCompare;
+			var regexAdd;
 			var inputValue = $('.formInput').val();
-			var regex =new RegExp("[^"+conf.legalTitleChars+ "]","g");
-			var secondRegex = new RegExp("[\/.]","g"	);
+			var conf = mw.config.get( 'wgCheckPageTitle' );
 			
+			var secondRegex = new RegExp("[\/.]","g");
 			
-			if ((monTableau = regex.exec(inputValue)) !== null || (monTableau = secondRegex.exec(inputValue)) !== null) {
-				 $('#ModalError').modal('show');
-				 return false;
-				 evt.preventDefault();
+			regex = new RegExp("[^"+conf.legalTitleChars+ "]","g");
+			regexDefaultCompare = regex.exec(inputValue);
+			regexAdd = secondRegex.exec(inputValue);
+
+			if (regexDefaultCompare !== null || (regexAdd !== null)) {
+				$('#ModalError').modal('show'); 	
+				event.preventDefault();
+				return false;
 			}
 			else {
-				var newValueInput = inputValue.trim(); // Modify me
+				var newValueInput = inputValue.trim();
 				$('.formInput').val(newValueInput);		
 				return true;
-				
 			}
 
 		});
