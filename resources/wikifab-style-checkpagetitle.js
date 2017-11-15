@@ -3,14 +3,14 @@
 	$(document).ready(function() {
 
 
-		$('.forminput_button').click(function(event){
+		$('.new-tutorial-page .forminput_button').click(function(event){
 			var regex;
 			var regexDefaultCompare;
 			var regexAdd;
-			var inputValue = $('.formInput').val();
+			var inputValue = $('#controlRegexFieldTitle input.formInput').val();
 			var conf = mw.config.get( 'wgCheckPageTitle' );
 			
-			var secondRegex = new RegExp("[\/.]","g");
+			var secondRegex = new RegExp("[\/:.]","g");
 			
 			regex = new RegExp("[^"+conf.legalTitleChars+ "]","g");
 			regexDefaultCompare = regex.exec(inputValue);
