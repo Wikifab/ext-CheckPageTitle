@@ -4,7 +4,7 @@
 
 
 		mw.loader.using( 'oojs' ).then(function () {
-			$('.new-tutorial-page .forminput_button').click(function(event){
+			$('.new-tutorial-page .forminput_button, .NewPageTabs .forminput_button').click(function(event){
 				var regex;
 				var regexDefaultCompare;
 				var regexAdd;
