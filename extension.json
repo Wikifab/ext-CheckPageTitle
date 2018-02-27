@@ -6,10 +6,16 @@
 	"descriptionmsg": "Check Page Title",
 	"license-name": "GPL-2.0+",
 	"type": "parserhook",
+	"MessagesDirs": {
+		"CheckPageTitle": [
+			"i18n"
+		]
+	},
 	"ResourceModules": {
 		"ext.checkpagetitle.js": {
 			"scripts": [
-				"resources/wikifab-style-checkpagetitle.js"			]
+				"resources/wikifab-style-checkpagetitle.js"
+			]
 		},
 		"ext.checkpagetitle.css": {
 			"styles": [

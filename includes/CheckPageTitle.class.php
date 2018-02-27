@@ -8,11 +8,11 @@ class CheckPageTitle {
 				<div class="modal-content">
 					<div class="modal-header">
 						<span class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true">&times;</span>
-						<h4 class="modal-title">Erreur de saisie dans le nom du tutoriel</h4>
+						<h4 class="modal-title">'.wfMessage("checkpagetitle-errormodal-title").'</h4>
 					</div>
 					<div class="modal-body">
-						<p>Vous avez entré un nom de page invalide avec un ou plusieurs caractères suivants : </p>
-							<p> < > @ ~ : * € £ ` + = / \ | [  ] { } ; ? # </p>
+						<p>'.wfMessage("checkpagetitle-errormodal-invalidsCharsintitle").'</p>
+							<p class="checkPageTitle-modalInvalidsCharslist"> < > @ ~ : * € £ ` + = / \ | [  ] { } ; ? # </p>
 					</div>
 					<div class="modal-footer">
 					</div>
@@ -31,10 +31,11 @@ class CheckPageTitle {
 	}
 
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgLegalTitleChars;
+		global $wgLegalTitleChars, $wgcptLegalTitleChars;
+		/*var_dump($vars);
 		$vars['wgCheckPageTitle'] = [
-		    'legalTitleChars' => $wgLegalTitleChars,
-		];
+		    'legalTitleChars' => $wgcptLegalTitleChars,
+		];*/
 		return true;
 	}
 }

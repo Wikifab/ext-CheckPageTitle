@@ -1,0 +1,9 @@
+{
+    "@metadata": {
+        "authors": [
+            "Pierre Boutet"
+        ]
+    },
+	"checkpagetitle-errormodal-title": "Error in page name",
+	"checkpagetitle-errormodal-invalidsCharsintitle": "You entered an invalid page name, with one or many of the following characters : "
+}

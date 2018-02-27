@@ -1,0 +1,9 @@
+{
+    "@metadata": {
+        "authors": [
+            "Pierre Boutet"
+        ]
+    },
+	"checkpagetitle-errormodal-title": "Erreur de saisie dans le nom du tutoriel",
+	"checkpagetitle-errormodal-invalidsCharsintitle": "Vous avez entré un nom de page invalide, avec un ou plusieurs caractères suivants : "
+}

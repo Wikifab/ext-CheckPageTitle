@@ -18,9 +18,11 @@ The extensions checks the "formInput" class.
 
     wfLoadExtension('CheckPageTitle');
 
-3. Add this line too to your LocalSettings.php file : 
+3. Add this line too to your LocalSettings.php file : (OBSOLETE)
 
 	$wgLegalTitleChars = " %!\"$'()*,\\-.\\/0-9@A-Z\^_`a-z~\\x80-\\xFF+";
+	
+Warning : this last configuration parameters has been disable du to bugs. the config is now fixed, and use this config :  "\"',\\-.\\/0-9@A-Z_`a-z~\\xC0-\\xFF+"
 	
 # Dependencies	
 
