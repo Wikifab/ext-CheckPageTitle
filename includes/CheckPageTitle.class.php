@@ -31,11 +31,12 @@ class CheckPageTitle {
 	}
 
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgLegalTitleChars, $wgcptLegalTitleChars;
+		global $wgLegalTitleChars, $wgcptLegalTitleChars, $wgSimpleLangageSelectionLangList;
 		/*var_dump($vars);
 		$vars['wgCheckPageTitle'] = [
 		    'legalTitleChars' => $wgcptLegalTitleChars,
 		];*/
+		$vars['wgSimpleLangageSelectionLangList'] = $wgSimpleLangageSelectionLangList;
 		return true;
 	}
 }
