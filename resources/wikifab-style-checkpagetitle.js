@@ -15,7 +15,7 @@
 
 				if($(this).attr('class') === "btn btn-success"){
 					var parentClass = $(this).parent().attr('class');
-					form = $(this).parent().parent();
+					form = $(this).parent().parent(form);
 					if(parentClass === "modal-footer NewCategoryTabs"){
 						inputValue.push($(form).find('input.form-control[name=title]').val());
 					} else {
