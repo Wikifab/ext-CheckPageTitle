@@ -48,7 +48,7 @@
 
 					// original : " %!\"$'()*,\\-.\\/0-9@A-Z^_`a-z~\\x80-\\xFF+"+ "]","g");
 					// allowed Chars :
-					regex = new RegExp("[^" + " \"',\\-.\\/0-9@A-Z_`a-z~\\xC0-\\xFF+" + "]", "g");
+					regex = new RegExp("[^" + " ',\\-.\\/0-9@A-Z_`a-z~\\xC0-\\xFF+" + "]", "g");
 
 					var secondRegex = new RegExp("[\/:.]", "g");
 
