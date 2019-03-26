@@ -13,12 +13,12 @@
 
 				var wgSimpleLangageSelectionLangList = mw.config.get('wgSimpleLangageSelectionLangList');
 
-				if($(this).attr('class') === "btn btn-success"){
+				if($(this).attr('class').includes("btn-success")){
 					var parentClass = $(this).parent().attr('class');
 					form = $(this).parent().parent(form);
-					if(parentClass === "modal-footer NewCategoryTabs"){
+					if(parentClass.includes("NewCategoryTabs")){
 						inputValue.push($(form).find('input.form-control[name=title]').val());
-					} else {
+					} else if(parentClass.includes("EditCategoryTabs")) {
 						for(var j = 0; j < wgSimpleLangageSelectionLangList.length; j++) {
 							var name = 'title' + wgSimpleLangageSelectionLangList[j].toUpperCase();
 							inputValue.push($(form).find('input.form-control[name="'+name+'"]').val());
