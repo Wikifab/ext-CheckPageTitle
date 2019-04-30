@@ -75,7 +75,7 @@
 					event.preventDefault();
 					return false;
 				} else {
-					var newValueInput = inputValue[i].trim();
+					var newValueInput = inputValue[i-1].trim();
 					$('.formInput').val(newValueInput);
 					return true;
 				}
