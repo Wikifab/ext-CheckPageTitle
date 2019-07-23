@@ -9,6 +9,7 @@
 				var regexDefaultCompare;
 				var regexAdd;
 				var form;
+				var value = '';
 				var inputValue = [];
 
 				var wgSimpleLangageSelectionLangList = mw.config.get('wgSimpleLangageSelectionLangList');
@@ -17,16 +18,28 @@
 					var parentClass = $(this).parent().attr('class');
 					form = $(this).parent().parent(form);
 					if(parentClass.includes("NewCategoryTabs")){
-						inputValue.push($(form).find('input.form-control[name=title]').val());
+						value = $(form).find('input.form-control[name=title]').val();
+						value = value.replace(/’/g, '\'');
+						value = value.replace(/–/g, '-');
+						$(form).find('input.form-control[name=title]').val(value);
+						inputValue.push(value);
 					} else if(parentClass.includes("EditCategoryTabs")) {
 						for(var j = 0; j < wgSimpleLangageSelectionLangList.length; j++) {
 							var name = 'title' + wgSimpleLangageSelectionLangList[j].toUpperCase();
-							inputValue.push($(form).find('input.form-control[name="'+name+'"]').val());
+							value = $(form).find('input.form-control[name="'+name+'"]').val();
+							value = value.replace(/’/g, '\'');
+							value = value.replace(/–/g, '-');
+							$(form).find('input.form-control[name="'+name+'"]').val(value)
+							inputValue.push(value);
 						}
 					}
 				} else {
 					form = $(this).parent(form);
-					inputValue.push($(form).find('input.formInput[name=page_name]').val());
+					value = $(form).find('input.formInput[name=page_name]').val();
+					value = value.replace(/’/g, '\'');
+					value = value.replace(/–/g, '-');
+					$(form).find('input.formInput[name=page_name]').val(value);
+					inputValue.push(value);
 				}
 				var conf = mw.config.get( 'wgCheckPageTitle' );
 
