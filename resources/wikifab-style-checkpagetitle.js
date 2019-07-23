@@ -19,18 +19,18 @@
 					form = $(this).parent().parent(form);
 					if(parentClass.includes("NewCategoryTabs")){
 						value = $(form).find('input.form-control[name=title]').val();
-                        value = value.replace(/’/g, '\'');
-                        value = value.replace(/–/g, '-');
-                        $(form).find('input.form-control[name=title]').val(value);
-                        inputValue.push(value);
+						value = value.replace(/’/g, '\'');
+						value = value.replace(/–/g, '-');
+						$(form).find('input.form-control[name=title]').val(value);
+						inputValue.push(value);
 					} else if(parentClass.includes("EditCategoryTabs")) {
 						for(var j = 0; j < wgSimpleLangageSelectionLangList.length; j++) {
 							var name = 'title' + wgSimpleLangageSelectionLangList[j].toUpperCase();
 							value = $(form).find('input.form-control[name="'+name+'"]').val();
-                            value = value.replace(/’/g, '\'');
-                            value = value.replace(/–/g, '-');
-                            $(form).find('input.form-control[name="'+name+'"]').val(value)
-                            inputValue.push(value);
+							value = value.replace(/’/g, '\'');
+							value = value.replace(/–/g, '-');
+							$(form).find('input.form-control[name="'+name+'"]').val(value)
+							inputValue.push(value);
 						}
 					}
 				} else {
@@ -38,8 +38,8 @@
 					value = $(form).find('input.formInput[name=page_name]').val();
 					value = value.replace(/’/g, '\'');
 					value = value.replace(/–/g, '-');
-                    $(form).find('input.formInput[name=page_name]').val(value);
-                    inputValue.push(value);
+					$(form).find('input.formInput[name=page_name]').val(value);
+					inputValue.push(value);
 				}
 				var conf = mw.config.get( 'wgCheckPageTitle' );
 
